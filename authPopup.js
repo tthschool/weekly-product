@@ -129,7 +129,7 @@ export function signOut() {
   const account = myMSALObj.getAccountByUsername(username);
   const logoutRequest = {
     account: account,
-    mainWindowRedirectUri: "/",
+    mainWindowRedirectUri: "/weekly-product/",
   };
   clearStorage(account);
   myMSALObj.logoutPopup(logoutRequest).catch((error) => {
