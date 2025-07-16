@@ -82,6 +82,8 @@ class MsalAuthenticationProvider {
           reject(Error("Failed to acquire an access token"));
         }
       } catch (error) {
+          console.log("Silent token acquisition failed. Fallback to interactive method.", error);
+
         // in case if silent token acquisition fails, fallback to an interactive method
         if (error instanceof msal.InteractionRequiredAuthError) {
           switch (this.interactionType) {
@@ -93,6 +95,7 @@ class MsalAuthenticationProvider {
               });
 
               if (response.accessToken) {
+                console.log(response.accessToken)
                 resolve(response.accessToken);
               } else {
                 reject(Error("Failed to acquire an access token"));
