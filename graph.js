@@ -76,6 +76,7 @@ class MsalAuthenticationProvider {
         });
 
         if (response.accessToken) {
+          console.log(response.accessToken)
           resolve(response.accessToken);
         } else {
           reject(Error("Failed to acquire an access token"));
