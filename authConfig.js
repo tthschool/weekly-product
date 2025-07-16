@@ -7,7 +7,7 @@ export const msalConfig = {
     auth: {
         clientId: 'a8e08cda-65ee-4686-97ba-e7d9e0f8a63f', // This is the ONLY mandatory field that you need to supply.
         authority: 'https://login.microsoftonline.com/d43d7b87-367a-4e2c-9e40-9ded6a42bf83', // Defaults to "https://login.microsoftonline.com/common"
-        redirectUri: 'http://localhost:3001/redirect', // You must register this URI on Azure Portal/App Registration. Defaults to window.location.href
+        redirectUri: 'https://tthschool.github.io/weekly-product/redirect', // You must register this URI on Azure Portal/App Registration. Defaults to window.location.href
         postLogoutRedirectUri: '/', //Indicates the page to navigate after logout.
         clientCapabilities: ['CP1'], // this lets the resource owner know that this client is capable of handling claims challenge.
     },
